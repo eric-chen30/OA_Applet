@@ -1,0 +1,26 @@
+<!--pages/createWeek/createWeek.wxml-->
+<scroll-view class="main">
+  <view class="faqi">
+    <view class="title">
+      <view class="a1">朱振华4.12周报</view>
+    </view>
+    <view class="form">
+      <textarea placeholder="今日工作内容" fixed='true' contenteditable="true" maxlength="-1" class="input"></textarea>
+    </view>
+    <view class="form">
+      <textarea placeholder="详细情况" maxlength="-1" class="input"></textarea>
+    </view>
+    <view class="form">
+      <textarea placeholder="下周计划" maxlength="-1" class="input"></textarea>
+    </view>
+    <view class="form">
+      <textarea placeholder="存在问题" maxlength="-1" class="input"></textarea>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 提交按钮 -->
+<!-- 提交按钮没有阴影 -->
+<button class="submit" bindtap="setSubmit" hover-class="other-button-class">
+  <text class="submittext">提交周报</text>
+</button>

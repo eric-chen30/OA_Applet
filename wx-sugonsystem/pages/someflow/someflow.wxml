@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="top">
+        <div class="top-top">{{ title }}流程</div>
+        <div class="top-bottom">{{ end_time }}</div>
+    </div>
+
+    <!-- 姓名通过receiver的id进行查询，状态的话通过item.state返回 -->
+    <i-card title="接收者姓名" extra="状态" style="width:300px;">
+
+        <!-- 此处为id和状态值，要转换成姓名和状态 -->
+        <view slot="content" class="content" style="margin-top:10px">
+            <div class="name">{{ receiver_name }}</div>
+            <div class="state">{{ status }}</div>
+        </view>
+
+    </i-card>
+
+    <!-- 按钮 -->
+    <div class="button">
+    <i-button bind:click="goToProcessHandle"  type="success" shape="circle">查看详情</i-button>
+    </div>
+
+</div>

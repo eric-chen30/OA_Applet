@@ -1,0 +1,78 @@
+<scroll-view class="main">
+<form bindsubmit="formSubmit" >
+  <view class="addto">
+    <view class="space">
+    </view>
+    <view class="title">
+      <view class="t1">添加获奖记录</view>
+      <view class="t2">添加您的获奖记录方便之后评优喔</view>
+    </view>
+    <view class="form">
+      <!-- 输入竞赛名称 -->
+            <!-- <view class="theme">
+        <view class="theme_title">竞赛名称</view>
+        <view class="inputBox">
+          <picker bindchange="bindnameChange" value="{{name}}" range="{{array}}">
+          <input bindinput="inputUpdatename" placeholder="输入竞赛的名称" value="{{name}}"></input>
+          </picker>
+        </view>
+      </view> -->
+      <!-- ------------------------- -->
+      <!-- 尝试修改  可选可输入-->
+      <view class="theme">
+        <view class="theme_title">竞赛名称</view>
+        <view>
+        <view class="inputBox {{start_reply?'off':'on'}}">
+        <picker bindchange="bindnameChange" value="{{name}}" range="{{array}}">
+          <input placeholder="选择竞赛的名称" value="{{name}}" disabled="true"></input>
+        </picker>
+        </view>
+          <view class="inputBox {{start_reply?'on':'off'}}">
+        <input  bindinput="inputUpdatename" placeholder="请输入竞赛名称"  type="text"></input>
+    </view>
+        </view>
+      </view>
+ 
+      <!-- 输入所获奖项 -->
+      <view class="theme">
+        <view class="theme_title">所获奖项</view>
+        <view class="inputBox">
+          <picker bindchange="bindlevelChange" value="{{level}}" range="{{level_array}}">
+          <input placeholder="选择所获奖项" value="{{level}}" disabled="true"></input>
+          </picker>
+        </view>
+      </view>
+      <!-- 输入参赛队伍名 -->
+      <view class="theme">
+        <view class="theme_title">参赛队伍</view>
+        <view class="inputBox">
+          <input bindinput="inputUpdateteam_name" placeholder="输入参赛队伍的名称"></input>
+        </view>
+      </view>
+      <!-- 输入参赛项目名称 -->
+      <view class="theme">
+        <view class="theme_title">参赛项目名称</view>
+          <view class="inputBox">
+          <input bindinput="inputUpdateproject_name" placeholder="输入参赛项目的名称"></input>
+        </view>
+      </view>
+      <!-- 输入赛事时间 -->
+      <view class="theme">
+        <view class="theme_title">赛事时间</view>
+        <view class="inputBox">
+        <picker mode="date" value="{{time}}" start="2016-01-01" end="" bindchange="bindDateChange">
+        <input bindinput="inputUpdatetime" placeholder="选择赛事时间" value="{{time}}" disabled="true"></input>
+         </picker>
+        </view>
+      </view>
+     
+    </view>
+    <view class="space1">
+    </view>
+    <!-- 提交按钮 -->
+    <button class="submit" bindtap="setSubmit" hover-class="other-button-class" disabled="{{buttonstatus}}">
+      <text class="submittext">提交</text>        
+    </button>
+  </view>
+  </form>
+</scroll-view>

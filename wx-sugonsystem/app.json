@@ -1,0 +1,70 @@
+
+{
+  "pages": [
+    "pages/Notlanded/Notlanded",
+    "pages/contest/contest",
+    "pages/addto/addto",
+    "pages/Landed/Landed",
+    "pages/weekDetail/weekDetail",
+    "pages/week/week",
+    "pages/createWeek/createWeek",
+    "pages/awardDetail/awardDetail",
+    "pages/changePasswd/changePasswd",
+    "pages/myTrainDetail/myTrainDetail",
+    "pages/InitiatTraining/InitiatTraining",
+    "pages/logss/logs",
+    "pages/logs/logs",
+    "pages/Mylists/Mylists",
+    "pages/trainDetail/trainDetail",
+    "pages/weekCreate/weekCreate",
+    "pages/adjustTraining/adjustTraining",
+    "pages/process/process",
+    "pages/addProcess/addProcess",
+    "pages/processDetail/processDetail",
+    "pages/changeflow/changeflow",
+    "pages/someflow/someflow",
+    "pages/someoneflow/someoneflow",
+    "pages/processhandle/processhandle"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/logss/logs",
+        "iconPath": "./images/train1.png",
+        "selectedIconPath": "./images/train.png"
+      },
+      {
+        "pagePath": "pages/week/week",
+        "iconPath": "./images/edit.png",
+        "selectedIconPath": "./images/edit1.png"
+      },
+      {
+        "pagePath": "pages/process/process",
+        "iconPath": "./icon/流程.png",
+        "selectedIconPath": "./icon/流程1.png"
+      },
+      {
+        "pagePath": "pages/contest/contest",
+        "iconPath": "./images/赛事.png",
+        "selectedIconPath": "./images/赛事1.png"
+      },
+      {
+        "pagePath": "pages/Landed/Landed",
+        "iconPath": "./images/我的.png",
+        "selectedIconPath": "./images/我的1.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-icon": "./miniprogram_npm/@vant/weapp/icon/index",
+    "van-search": "./miniprogram_npm/@vant/weapp/search/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

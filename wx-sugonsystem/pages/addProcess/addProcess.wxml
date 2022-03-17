@@ -1,0 +1,67 @@
+<!--pages/AddProcess/AddProcess.wxml-->
+
+<div class="container">
+    <div class="top">
+        <div class="top-top">发布流程</div>
+    </div>
+
+
+    <!-- 流程名 -->
+    <i-panel title="流程名：">
+    <!-- value="{{title}}"        bindinput="forTitle" -->
+    <i-input type="textarea" bind:change="changeTitle" placeholder="请输入流程名" />
+    </i-panel>
+    
+    <!-- 截止时间 -->
+    <i-panel title="截止时间：">
+    <van-cell title="选择结束时间" value="{{ date }}" bind:click="onDisplay" />
+    <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+    </i-panel>
+
+    <!-- 接收者 -->
+    <i-panel title="接收者：">
+    <!-- value="{{receiver}}"      bindinput="forReceiver"-->
+    <i-input type="textarea" bind:change="changeReceiver" placeholder="请输入接收者姓名" />
+    </i-panel>
+
+    <!-- 具体内容 -->
+    <i-panel title="具体内容：">
+    <!-- value="{{article}}"     bindinput="forArticle"-->
+    <i-input type="textarea" bind:change="changeArticle" placeholder="请输入具体内容" />
+    </i-panel>
+
+    <i-button bind:click="publishProcess" type="success" shape="circle" style="margin-top:10px">发布</i-button>
+    
+</div>
+
+
+
+ <!-- <i-panel title="开始时间：">
+    <van-cell title="选择开始时间" value="{{ date }}" bind:click="onDisplay" />
+    <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+    </i-panel>-->
+
+ <!-- <i-panel title="开始结束日期：">
+        <van-cell title="选择日期区间" value="{{ date }}" bind:click="onDisplayTim" />
+        <van-calendar
+          show="{{ show }}"
+          type="range"
+          bind:close="onCloseTim"
+          bind:confirm="onConfirmTim"
+        />
+    </i-panel> -->
+
+    <!-- <i-panel title="接收者：">
+    <van-cell is-link bind:click="showPopup" value="{{ reciver }}"></van-cell> -->
+
+    <!-- <van-popup show="{{ showpop }}" bind:close="onClosepop" position="bottom" round> -->
+        <!-- 多列选择 -->
+        <!-- <van-picker show-toolbar
+  title="接收者"
+  
+  columns="{{ columns }}"
+  bind:cancel="onCancel"
+  bind:confirm="onConfirm" bind:change="onChange" /> -->
+        
+    <!-- </van-popup>
+    </i-panel> -->

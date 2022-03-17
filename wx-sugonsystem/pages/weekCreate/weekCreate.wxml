@@ -1,0 +1,28 @@
+<!--pages/createWeek/createWeek.wxml-->
+<scroll-view class="main">
+  <view class="faqi">
+    <view class="title">
+      <view class="a1">新增周报</view>
+    </view>
+    <view class="sign">
+      每年1月1日-1月31日及6月1日-6月30日，考虑到期末考试因素，周报与周会非必需，且不纳入考核。
+    </view>
+    <view class="form">
+      <textarea placeholder="今日工作内容" fixed='true' contenteditable="true" maxlength="-1" bindinput="inputthiscontent" class="input"></textarea>
+    </view>
+    <view class="form">
+      <textarea placeholder="详细情况" maxlength="-1" bindinput="inputdetails" class="input"></textarea>
+    </view>
+    <view class="form">
+      <textarea placeholder="下周计划" maxlength="-1" bindinput="inputnextcontent" class="input"></textarea>
+    </view>
+    <view class="form">
+      <textarea placeholder="存在问题" maxlength="-1" bindinput="inputproblem" class="input"></textarea>
+    </view>
+    <!-- 提交按钮 -->
+<!-- 提交按钮没有阴影 -->
+  <button class="submit" bindtap="setSubmit" hover-class="other-button-class">
+    <text class="submittext">提交周报</text>
+  </button>
+  </view>
+</scroll-view>

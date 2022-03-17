@@ -1,0 +1,298 @@
+/* 整体页面背景 */
+
+page {
+  background-color: #fafafa;
+}
+
+/* 竞赛 */
+
+.js {
+  font-size: 60rpx;
+  text-shadow: 0 0 6rpx rgb(160, 164, 170);
+  font-style: PingFangSC-Semibold;
+  color: #203152;
+  margin-left: 5%;
+  margin-top: 16rpx;
+  line-height:90rpx; 
+  height: 160rpx;
+  float: left;
+}
+
+/* 竞赛右边蓝色加号 */
+
+.plus {
+  background-color: #5680fa;
+  height: 90rpx;
+  width: 90rpx;
+  float: right;
+  margin-right: 5%;
+  margin-top: 2%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  font-size: 80rpx;
+  font-weight: 60rpx;
+  box-shadow: 5rpx 5rpx 10rpx rgb(192, 189, 189);
+}
+
+/* 搜索框 */
+
+.serch-field-class {
+  height: 110rpx !important;
+  width: 90% !important;
+  box-shadow: 0 0 6rpx #5f687e;
+  font-size: 20px !important;
+  margin: 0 auto !important;
+}
+
+.search {
+  display: inline-block;
+  height: 100rpx;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -3%;
+  margin-inline-start: 20px;
+  border-radius: 60rpx;
+  box-shadow: 0 0 6rpx #5f687e;
+  margin-bottom: 20rpx;
+}
+/* 图标 */
+.search .image {
+  height: 40rpx;
+  width: 40rpx;
+  margin-top: 35rpx;
+  margin-left: 15px;
+  float: left;
+} 
+
+.word {
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  float: left;
+  color: #0b1018;
+}
+
+/* 左右滚动整体框*/
+
+.scroll-whole {
+  display:flex;
+  border-radius: 15px;
+  /* margin-top: 60rpx; */
+  margin: 25rpx 50rpx;
+  white-space: nowrap;
+}
+
+/* 每一个小显示框 */
+
+.scroll-item {
+  height: 100px;
+  width: 150px;
+  padding: 0px;
+  margin-right: 10px;
+  border-radius: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.scroll-image {
+  height: 100px;
+  width: 150px;
+  padding: 0px;
+  margin-right: 10px;
+  border-radius: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+/*  */
+
+.scroll-item .scroll-text {
+  color: #f4f4f4;
+  font-size: 36rpx;
+  font-weight: 600;
+  top: 10px;
+  left: 10px;
+  height: 80px;
+  width: 130px;
+  display: flex; /*设置显示样式**/
+  align-items: center; /**子view垂直居中*/
+  vertical-align: center; /**垂直居中*/
+  justify-content: center; /**内容居中*/
+  text-align: center;
+  position: absolute;
+}
+
+/* 小显示框里的问题 */
+
+/* .scrool-text .s-title{
+  font-weight: bold;
+  color: #203152;
+  font-size: 16rpx;
+  height: 30rpx;
+  /* margin-left: 20rpx; 
+
+} */
+
+/* scroll-view ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+} */
+
+.tips {
+  color: gray;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+/* 我的获奖记录 */
+
+.exempleTitle {
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-left: 50rpx;
+  /* margin-bottom: -30rpx; */
+}
+
+/* 获奖记录 整体*/
+
+.whole {
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  border-radius: 25rpx;
+  bottom: 0;
+}
+
+/* 获奖记录整体 */
+
+/* .popular {
+  height: 400rpx;
+  margin: 60rpx 6%;
+  font-size: 40rpx;
+  line-height: 100rpx;
+}  */
+
+/* 单个记录框 */
+
+.exampleBox {
+  height: 375rpx;
+  position: relative;
+  margin-top: 20rpx;
+  border-radius: 25rpx;
+  background-size:cover;
+  /* box-shadow: 0 2rpx 10rpx #5f687e; */
+
+}
+
+/* 图片圆角 */
+
+.example-image {
+  border-radius: 25rpx;
+  height:375rpx;
+  box-shadow: 0 2rpx 5rpx #5f687e;
+}
+
+
+
+/* 竞赛名称/时间框 */
+
+.small_box {
+  background-color: rgba(247, 243, 243, 0.836);
+  height: 200rpx;
+  width: 520rpx;
+  position: absolute;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 10rpx gray;
+  top: 145rpx;
+  left: -16rpx;
+}
+
+/* 竞赛名称 */
+
+.small_box .c_name {
+  font-weight: bold;
+  color: #203152;
+  font-size: 36rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}
+
+/* 竞赛时间 */
+
+.small_box .c_time {
+  color: #7c8698;
+  font-size: 28rpx;
+  height: 10rpx;
+  margin-top: 30rpx;
+  margin-left: 18rpx;
+}
+
+/* 竞赛等级 */
+.right-box{
+  background-color: rgb(247, 232, 99);
+  text-align: center;
+  height: 50rpx;
+  width: 100rpx;
+  position: absolute;
+  border-radius: 23rpx;
+  /* box-shadow: 0 4rpx 10rpx gray; */
+  top: 25rpx;
+  right: 20rpx;
+  padding-top: 4px;
+}
+.sy {
+  background-color: #FA607D;
+  color: #fff;
+  width: 200rpx;
+  height: 38rpx;
+  text-align: center;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  font-weight: bold;
+  position: relative;
+  top: -300rpx;
+  left: 500rpx;
+}
+.competition{
+  height: 800rpx;
+} 
+
+/* 底部导航栏 */
+
+/* .tab {
+  height: 168rpx;
+  margin-top: 250rpx;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+} */
+
+/* 底部图标 */
+
+/* .top {
+  height: 120rpx;
+  background-color: #fff;
+  display: flex;
+}
+.top .average {
+  width: 44rpx;
+  height: 44rpx;
+  margin: auto;
+}
+#ico image{
+  margin: 20rpx auto;
+} */
+
+/* 底部黑色横线
+.box {
+  width: 240rpx;
+  height: 14rpx;
+  background-color: black;
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+} */

@@ -1,0 +1,89 @@
+<view class="whole">
+  <!-- 头部 -->
+  <view style="height:{{uppHeight}}">
+
+    <view class="first" style="height:{{uppHeightTop}}">
+      <view class="js" style="height:{{uppHeightTop}}">培训</view>
+
+      <view class="fenlei">
+
+        <view class="select_box">
+
+          <view class="select" catchtap="selectTaps">
+            <text class="select_text">{{selectDatas[indexs]}}</text>
+            <image class='select_img {{shows&&"select_img_rotate"}}' src='../../images/sanjiao.png'></image>
+          </view>
+
+          <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+            <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+          </view>
+
+        </view>
+
+      </view>
+
+      <view class="jia" bindtap="goToInitiatTraining">+</view>
+    </view>
+
+    <!--搜索框-->
+      
+    <view class="search" style="height:{{uppHeightBot}}">
+      <van-icon class="image" name="search" size="35px" style="float:left" />
+      <input type="text" placeholder="搜索" class="word" placeholder-style="color:#7C8698;font-size:17px;font-weight:700" bindinput="bindKeyInput" bindblur="bindKeyBlur" ></input>
+    </view>
+  </view>
+
+  <view style="height:{{conBlack}}"></view>
+
+  <!-- 中间内容 -->
+  <scroll-view scroll-y="true" style="height:{{conHeight}}" enable-flex='true'>
+    <view class="tips">{{tips}}</view>
+    <view class="exemple">
+
+      <view wx:for="{{dataList}}" wx:key="id" wx:for-item="item" class="exempleBox" catchtap='getDetailId' data-detailid='{{item.id}}'>
+        <navigator url="../myTrainDetail/myTrainDetail">
+          <!-- <image src="../../images/kubernetes.png" mode="widthFix"></image> -->
+          <image src="{{item.img}}" mode="widthFix"></image>
+          <view class="sai">
+            <view class="s">{{item.name}}</view>
+            <view class="d">{{item.mine.name}}</view>
+            <view class="r">{{item.time}}</view>
+            <view class="l">{{item.location}}</view>
+          </view>
+        </navigator>
+        <view wx:if="{{item.status == 2}}" class="statusPending">待审</view>
+        <view wx:elif="{{item.status == 3}}" class="statusReported">已报备</view>
+        <view wx:elif="{{item.status == 4}}" class="statusFail">未通过</view>
+        <view wx:elif="{{item.status == 5}}" class="statusCompleted">已结束</view>
+        <view wx:else class="statusUnknown">发起</view>
+      </view>
+        
+    </view>
+
+  </scroll-view>
+
+
+
+
+
+  <!--底部导航栏-->
+  <!-- <view class="tab" style="height:{{botHeight}}">
+      <view class="top">
+          <view class="average" bindtap="goTologs">
+              <image src="../../images/1.png" class="average"></image>
+          </view>
+          <view class="average" bindtap="goToWeek">
+              <image src="../../images/2.png" class="average"></image>
+          </view>
+          <view id='ico'>
+                  <image style='width:50px;height:50px;' src="../../images/RY.png" class="average"></image>
+          </view>
+          <view class="average" bindtap="goTocontest">
+              <image src="../../images/4.png" class="average"></image>
+          </view>
+          <view class="average" bindtap="goToLanded">
+              <image src="../../images/_5.png" class="average"></image>
+          </view>
+      </view> -->
+  <!-- </view> -->
+</view>

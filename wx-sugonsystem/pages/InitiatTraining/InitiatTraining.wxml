@@ -1,0 +1,88 @@
+<!-- 发起培训 -->
+<!--pages/faqi/faqi.wxml-->
+<scroll-view class="main">
+  <view class="faqi" style="letter-spacing: 3rpx">
+    <view class="title">
+      <view class="a1">发起培训</view>
+      <view class="a2">请输入您所想发起培训的相关信息</view>
+    </view>
+    <view class="form">
+      <!-- 输入培训主题 -->
+      <view class="theme">
+        <view class="theme_title" style="font-weight: 600">培训主题</view>
+        <view class="inputBox">
+          <input bindinput="inputUpdatename" placeholder="输入培训的主题" placeholder-style="color: #D4D5DB;font-weight: 500" ></input>
+        </view>
+      </view>
+      <!-- 输入培训日期 -->
+      <view class="theme">
+        <view class="theme_title" style="font-weight: 600">培训日期</view>
+        <view class="inputBox">
+        <picker mode="date" value="{{date}}" start="2020-01-01" end="" bindchange="bindDateChange">
+          <input placeholder="输入培训时间"
+           placeholder-style="color: #D4D5DB;font-weight: 500" disabled="true" value="{{date}}"></input>
+         </picker>
+        </view>
+      </view>
+      <!-- 输入培训时间 -->
+      <view class="theme">
+        <view class="theme_title" style="font-weight: 600">培训时间</view>
+        <view class="inputBox">
+        <picker mode="time" value="{{time}}" end="" bindchange="bindTimeChange">
+          <input placeholder="输入培训时间"
+           placeholder-style="color: #D4D5DB;font-weight: 500" disabled="true" value="{{time}}"></input>
+         </picker>
+        </view>
+      </view>
+      <!-- 输入培训通知 -->
+      <view class="theme">
+        <view class="theme_title" style="font-weight: 600">培训通知</view>
+        <view class="inputBox">
+          <input bindinput="inputUpdateinform" placeholder="输入培训的通知" placeholder-style="color: #D4D5DB;font-weight: 500" ></input>
+        </view>
+      </view>
+
+
+      <!-- 输入培训地点 -->
+      <view class="theme">
+        <view class="theme_title" style="font-weight: 600">培训地点</view>
+        <view class="inputBox">
+          <input bindinput="inputUpdatelocation" placeholder="输入培训的地点" placeholder-style="color: #D4D5DB;font-weight: 500" ></input>
+        </view>
+      </view>
+      <!-- 输入培训描述 -->
+      <view class="theme">
+        <view class="theme_title" style="font-weight: 600">培训描述</view>
+        <view class="inputBox">
+          <input bindinput="inputUpdatedescribe" placeholder="输入培训的描述" placeholder-style="color: #D4D5DB;font-weight: 500" ></input>
+        </view>
+      </view>
+      <!-- 输入培训海报 -->
+      <view class="theme1">
+        <view class="theme_title1" style="font-weight: 600">培训海报</view>
+        <view class="img">
+          <view style="height:119px;">
+            <image class="show-image" mode="aspectFitf" src="{{src}}" style="height:119px;"></image>
+          </view>
+        </view>
+      </view>
+      <view class="plus">
+          <view class="plusText" wx:if="{{trainData.img == ''}}">
+            <text class="iconfont icon-plus" bindtap="gotoShow"></text>
+          </view>
+
+          <view class="plusImg" wx:else>
+            <image class='showImage' src="{{trainData.img}}" data-src="{{trainData.img}}" bindtap="previewImage" mode="widthFix"></image>
+          </view>
+      </view>
+    </view>
+    <view class="submitBtn">
+      <!-- 提交按钮 -->
+      <button class="submit" bindtap="setSubmit" hover-class="other-button-class">
+        <text class="submittext">提交审核</text>        
+      </button>
+      <view class="submitHei"></view>
+    </view>
+  </view>
+</scroll-view>
+

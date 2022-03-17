@@ -1,0 +1,27 @@
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 50rpx 0;
+}
+.container .top {
+  height: 100px;
+  display: inline-block;
+  align-items: center;
+}
+.container .top .top-top {
+  font-size: 24px;
+  font-weight: 200;
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.container .top .top-bottom {
+  font-size: 12px;
+  color: #303030;
+  display: flex;
+}
+.container .content {
+  display: flex;
+  justify-content: space-between;
+}

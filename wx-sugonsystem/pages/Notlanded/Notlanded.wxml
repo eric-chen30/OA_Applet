@@ -1,0 +1,30 @@
+<!--Notlanded.wxml-->
+<view>
+  <view class="user">
+    <image src="../../images/RY.jpg"></image>
+    <view class="word">
+      <view class="t">湖北大学瑞翼工坊</view>
+      <text>\n</text>
+      <view class="b">Hubu Sugon</view>
+    </view>
+  </view>
+  <!-- <form bindsubmit='formSubmit'> -->
+  <view class='form'>
+    <!--<text class='label'>手机<text class='red'>(必填)</text></text>-->
+    <input class='int' name="phone" placeholder="请输入手机号" maxlength="20" bindinput="inputPhoneNum"></input>  
+    <!--<text class='label'>密码<text class='red'>(必填)</text></text>-->
+    <view style="display:flex;" class="int">
+      <input class='inputPasswd' name="password" wx:if="{{!isShow1}}" placeholder="请输入密码" bindinput="inputPassword" style="flex:1" value="{{password}}" type="text" maxlength="16"></input>
+      <input class='inputPasswd' name="password" wx:else placeholder="请输入密码" bindinput="inputPassword" style="flex:1" value="{{password}}" type="password" maxlength="16"></input>
+      <view class="see" style="width:25px;padding-right:5px; display:flex;align-items: center;">
+        <image class="" bindtap="showNewPsd1" src="{{isShow1?'../../images/nosee.png':'../../images/see.png'}}" style="width:40rpx;height:23rpx" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+  <view class="tab" bindtap="login">
+    <button class='submit'>
+      <text class="go">Go</text>
+    </button>
+  </view>
+   <!--</form> -->
+</view>

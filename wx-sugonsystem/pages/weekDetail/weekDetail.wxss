@@ -1,0 +1,81 @@
+/* pages/weekDetail/weekDetail.wxss */
+@import "../../iconfont.wxss";
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+  padding-bottom: 10px;
+}
+
+.faqi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  margin-top: 20px;
+  background-color: #fafafa
+}
+
+.title {
+  width: 590rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin-top: 20rpx; */
+}
+
+.a1{
+  height: 80rpx;
+  color: #203152;
+  font-family: "PingFangSC-Regular";
+  font-size: 66rpx;
+  font-weight: 600;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.submitTime{
+  height: 40rpx;
+  color: #203152;
+  font-family: "PingFangSC-Regular";
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-bottom: 40rpx
+}
+
+.form {
+  overflow: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22rpx;
+  align-items: center;
+  width: 84%;
+  height: 278rpx;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 20rpx 20rpx 20rpx rgba(0,0,0,0.05);
+  border-radius: 26rpx;   /*圆角半径*/
+  padding: 10rpx;
+}
+
+.input{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 32rpx;
+  color: black;
+  white-space: pre-wrap;
+}
+
+.textHead{
+  font-size: 38rpx;
+  font-weight: 500;
+}

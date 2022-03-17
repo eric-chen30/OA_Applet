@@ -1,0 +1,31 @@
+<!--pages/weekDetail/weekDetail.wxml-->
+<scroll-view class="main">
+  <view class="faqi">
+
+    <view class="title">
+      <view class="a1">{{weekly[0].name}}</view>
+      <view class="submitTime">提交时间: {{weekly[0].date}}</view>
+    </view>
+
+    <view class="form">
+      <view maxlength="-1" class="input">
+        <view readonly>{{weekly[0].this_content}}</view>
+      </view>
+    </view>
+
+    <view class="form">
+      <view>
+        <view maxlength="-1" class="input" readonly>{{weekly[0].details}}</view>
+      </view>
+    </view>
+
+    <view class="form">
+      <view maxlength="-1" class="input" readonly>{{weekly[0].next_content}}</view>
+    </view>
+
+    <view class="form">
+      <view maxlength="-1" class="input" readonly>{{weekly[0].problem}}</view>
+    </view>
+
+  </view>
+</scroll-view>

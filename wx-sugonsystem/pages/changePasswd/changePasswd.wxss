@@ -1,0 +1,80 @@
+/* pages/changePasswd/changePasswd.wxss */
+page {
+  /* background-color: rgb(243, 242, 242); */
+  font-size: 32rpx;
+}
+
+.container {
+  padding: 10rpx;
+  box-sizing: border-box;
+  margin-top: 50rpx;
+}
+
+.top {
+  width: 100%;
+  /* background-color: #fff; */
+  border-radius: 15rpx;
+  box-shadow: 0 5rp 5rp #e9e9e9;
+}
+
+.one_list {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+input {
+  width: 450rpx;
+  margin: 10rpx 35rpx;
+}
+
+.x {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  float: right;
+}
+
+.x_line {
+  width: 100%;
+  height: 4rpx;
+  background-color: #eee;
+}
+
+.change{
+  display: flex;
+  align-items: center;
+  background-color: rgb(241, 243, 247);
+  width: 700rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+}
+ 
+.btn {
+  width: 200rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  margin-top: 100rpx;
+  background: linear-gradient(to right, #22a0ff, #007ce7);
+  border-radius: 50rpx;
+  box-shadow: 0 5rpx 5rpx #8ccaf6;
+  letter-spacing: 2rpx;
+}
+
+.see{
+  transform: translateX(120rpx);
+}

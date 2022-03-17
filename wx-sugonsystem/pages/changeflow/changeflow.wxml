@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="top">
+        <div class="top-top">修改流程</div>
+    </div>
+
+    <i-panel title="流程名：">
+    <i-input value="{{ title }}" type="textarea" bind:change="updateTitle" placeholder="请输入流程名" />
+    </i-panel>
+
+     <!-- 截止时间 -->
+    <i-panel title="截止时间：">
+    <van-cell title="选择结束时间" value="{{ end_time }}" bind:click="onDisplay" />
+    <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+    </i-panel>
+
+    <i-panel title="接收者：">
+    <i-input value="{{ receiver }}" type="textarea" bind:change="updateReceiver" placeholder="请输入接收者的姓名" />
+    </i-panel>
+
+
+
+    <i-panel title="具体内容：">
+    <i-input value="{{ article }}" type="textarea" bind:change="updateArticle" placeholder="请输入具体内容" />
+    </i-panel>
+
+    <i-button bind:click="updateProcess" type="success" shape="circle" style="margin-top:10px">提交</i-button>
+    
+</div>

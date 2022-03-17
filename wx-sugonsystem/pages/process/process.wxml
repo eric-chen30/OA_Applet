@@ -1,0 +1,129 @@
+<!--pages/process/process.wxml-->
+
+<view class="whole">
+  <view style="height:{{uppHeight}}">
+
+  <view class="first" style="height:{{uppHeightTop}}">
+    <view class="js" style="height:{{uppHeightTop}}">流程</view>
+
+    <!-- 下拉选择框1 -->
+    <view class="fenlei">
+
+      <view class="select_box">
+
+        <view class="select" catchtap="FselectTaps">
+          <text class="select_text">{{selectDatas[Findexs]}}</text>
+          <image class='select_img {{shows1&&"select_img_rotate"}}' src='../../images/sanjiao.png'></image>
+        </view>
+
+        <view class='option_box' style='height:{{shows1?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+          <text class='option' style='{{FIndexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-item='{{item}}' data-index='{{index}}' catchtap='FoptionTaps'>{{item}}</text>
+        </view>
+
+      </view>
+
+    </view>
+
+
+    <!-- 下拉选择框2 -->
+    <view class="fenlei">
+
+      <view class="select_box">
+
+        <view class="select" catchtap="LselectTaps">
+          <text class="select_text">{{statusDatas[Lindexs]}}</text>
+          <image class='select_img {{shows2&&"select_img_rotate"}}' src='../../images/sanjiao.png'></image>
+        </view>
+
+        <view class='option_box' style='height:{{shows2?(statusDatas.length>5?300:statusDatas.length*60):0}}rpx;'>
+          <text class='option' style='{{LIndexs==statusDatas.length-1&&"border:0;"}}' wx:for='{{statusDatas}}' wx:key='this' data-item='{{item}}' data-index='{{index}}' catchtap='LoptionTaps'>{{item}}</text>
+        </view>
+
+      </view>
+
+    </view>
+
+    <view class="jia" bindtap="goToAddProcess">+</view>
+  </view>
+
+  <!--搜索框-->
+    
+  <view class="search" style="height:{{uppHeightBot}}">
+    <van-icon class="image" name="search" size="35px" style="float:left" />
+    <input type="text" placeholder="搜索" class="word" placeholder-style="color:#7C8698;font-size:17px;font-weight:700" bindinput="bindKeyInput" bindblur="bindKeyBlur" ></input>
+  </view>
+</view>
+
+<view style="height:{{conBlack}}"></view>
+
+<!-- 中间内容 -->
+<scroll-view scroll-y="true" style="height:{{conHeight}}" enable-flex='true' bindscrolltolower="Lordmore" scroll-top='{{topNum}}'>
+  <!-- <view class="tips">{{tips}}</view> -->
+
+  <!-- 当选择框的内容为我的 -->
+  <view wx:if="{{ selectDatas[Findexs] == '全部' }}" class="exemple">
+
+    <view wx:for="{{dataList}}" wx:key="id" wx:for-item="item" class="exempleBox" catchtap='getDetailId' data-detailid='{{item.id}}' data-status='{{item.state}}' data-receiverid='{{item.receiver}}'>
+    <!-- 路由还需要携带状态，以便于详情页面根据状态进行不同按钮的渲染 -->
+      <!-- 这里的路由要携带任务id，传给processDetail页面 -->
+
+        <view class="sai">
+          <view class="s">{{item.title}}</view>
+          <view class="d">{{item.beginTime}} - {{item.endTime}}</view>
+          <view class="r"></view>
+          <view class="l">{{item.article}}</view>
+        </view>
+
+      <view wx:if="{{item.state == 1}}" class="statusGet">领取</view>
+      <view wx:elif="{{item.state == 2}}" class="statusTodo">待办</view>
+      <view wx:elif="{{item.state == 3}}" class="statusDone">完成</view>
+      <view wx:elif="{{item.state == 4}}" class="statusDeny">逾期</view>
+      <view wx:else class="statusUnknown">发起</view>
+
+    </view>
+      
+  </view>
+
+  <!-- 当选择内容为人员 -->
+  <view wx:if="{{ selectDatas[Findexs] == '人员' }}" class="main">
+
+      <view class="detail">
+        <!-- 人员内容 -->
+        <view catchtap='getUserName' wx:for='{{peopleList}}' wx:key="id" wx:for-item="item" data-cid='{{item.id}}' data-name='{{item.name}}'>
+          <view class="theme">
+            <view>
+              <text class="theme_title">{{item.name}}</text>
+              <!-- <text>{{item.date}}</text> -->
+            </view>
+            <view class="inputBox">
+              点击查看
+            </view>
+          </view>
+        </view>
+      </view>
+
+  </view>
+
+
+  <!-- 当选择内容为流程 -->
+  <view wx:if="{{ selectDatas[Findexs] == '流程' }}" class="main">
+      <view class="detail">
+        <!-- 流程内容 -->
+        <view catchtap="goToprocessDetail" wx:for='{{processList}}' wx:key="id" wx:for-item="item" data-cid='{{item.id}}' data-status='{{item.state}}' data-receiver='{{item.receiver}}'>
+          <view class="theme">
+            <view>
+              <text class="theme_title">{{item.title}}</text>
+              <text>{{item.end_time}}</text>
+            </view>
+            <view class="inputBox">
+              {{item.article}}
+            </view>
+          </view>
+        </view>  
+      </view>
+  </view>
+
+</scroll-view>
+
+</view>
+

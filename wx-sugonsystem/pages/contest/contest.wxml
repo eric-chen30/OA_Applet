@@ -1,0 +1,97 @@
+<!-- contest.wxml -->
+<!-- <wxs src='../Todate.wxs' module='tools'/> -->
+<view>
+  <!-- 头部高度 动态设置 获取可使用窗口高度后设置 -->
+  <view style="height:{{upperHeight}} ">
+    <view>
+      <view class="js">竞赛</view>
+      <view class="plus" bindtap="goToaddto">+</view>
+    </view>
+    <view>
+      <view class="search">
+        <van-icon class="image" name="search" size="35px" style="float:left" />
+        <input type="text" placeholder="搜索" class="word" placeholder-style="color:#7C8698;font-size:17px;font-weight:700" bindblur="searchInput"></input>
+      </view>
+    </view>
+
+  </view>
+  <!-- 搜索框 -->
+  <!-- <van-search
+        value="{{ value }}"
+        shape="round"
+        background="#fafafa"
+        placeholder="请输入搜索关键词"
+      /> -->
+
+  <view>
+    <!-- 图片要求可以左滑 -->
+    <scroll-view scroll-x="true" style="height:{{scrollHeight}}" enable-flex='true'>
+      <view class="scroll-whole">
+        <view wx:for="{{smallList}}" wx:key="id" wx:for-item="item" class="scroll-item">
+          <image class="scroll-image" src="{{item.picture}}" mode="aspectFill"></image>
+          <view class="scroll-text">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <view>
+    <view class='exempleTitle'>我的获奖记录</view>
+    <scroll-view scroll-y="true" style="height:{{contentHeight}}" enable-flex='true'>
+      <!-- 竞赛整体 -->
+      <view class="whole">
+      <view class="tips">
+        {{tips}}
+      </view>
+        <!--竞赛列表的渲染包含图片和文字框的内容-->
+        <view wx:for="{{dataList}}" wx:key="id" wx:for-item="item" class="exampleBox" data-detailid='{{item.id}}' bindtap='goToDetail'>
+          <!-- <navigator url="../../pages/A/A"> -->
+            <image class="example-image" src="{{item.picture}}" mode="scaleToFill"></image>
+            <view class="right-box"> 
+            <text>{{item.level}}</text>
+            </view>
+            <view class="small_box">
+              <view class="c_name">{{item.name}}</view>
+              <view class="c_time">{{item.date}}</view>
+            </view>
+          <!-- </navigator> -->
+        </view>
+      </view>
+    </scroll-view>
+    <!-- <scroll-view class="competition" scroll-y="true">
+      <view wx:for="{{data1}}" wx:key="id" data-cid="{{item.id}}">
+        <image src="{{item.picture}}" bindtap="deletecompetition" data-cid="{{item.id}}"></image>
+        <view class="sai" bindtap="information" data-cid="{{item.id}}">
+          <view class="s">{{item.name}}</view>
+          <view class="r">{{item.time}}</view>
+          <view class="sy">{{item.level}}</view>
+        </view>
+      </view>
+    </scroll-view> -->
+    <!-- 互联网+比赛 -->
+    <!-- <image bindtap="deletecompetition" src="../../images/internet.jpg"></image>
+        <view bindtap="goToB">
+				<view class="sai">
+						<view class="s">{{data1.name}}</view>
+            <view class="r">{{data1.time}}
+            </view>
+				</view>
+        </view>
+				<view class="sy">{{data1.level}}</view> -->
+    <!-- 数学建模比赛 -->
+    <!-- <image bindtap="deletecompetition" src="../../images/model(1).jpg"></image>
+        <view bindtap="goToB">
+				<view class="sai1">
+						<view class="s">{{data2.name}}</view>
+						<view class="r1">{{data2.time}}</view>
+				</view>
+        </view>
+				<view class="sy1">{{data2.level}}</view> -->
+  </view>
+
+
+
+</view>

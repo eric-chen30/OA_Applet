@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="top">
+        <div class="top-top">流程详情</div>
+    </div>
+
+    <i-panel title="流程名：">
+    <i-input disabled value="{{ title }}" />
+    </i-panel>
+
+    <i-panel title="开始时间：">
+    <i-input disabled value="{{ begin_time }}" />
+    </i-panel>
+
+    <i-panel title="结束时间：">
+    <i-input disabled value="{{ end_time }}" />
+    </i-panel>
+
+    <i-panel title="接收者：">
+    <i-input disabled value="{{ receiver }}" />
+    </i-panel>
+
+    <i-panel title="具体内容：">
+    <i-input disabled value="{{ article }}" />
+    </i-panel>
+
+    <i-panel title="反馈意见：" >
+    <i-input disabled value="{{ plan }}" bind:change="changePlan"/>
+    </i-panel>
+
+    <!-- 修改流程按钮 -->
+    <i-button bind:click="goTochangeflow" type="success" shape="circle" style="margin-top:10px">修改</i-button>
+
+    <!-- 删除流程按钮 -->
+    <i-button bind:click="deleteProcess" type="error" shape="circle" style="margin-top:10px">删除</i-button>
+    
+</div>
+
+
+

@@ -1,0 +1,78 @@
+<!--pages/week/week.wxml-->
+<view>
+
+
+  <!-- 头部 -->
+<view style="height:{{uppHeight}}">
+    <!--<view class="my"></view>-->
+    <view class="first" style="height:{{uppHeightTop}}">
+        <view class="js" style="height:{{uppHeightTop}}">周报</view>
+
+        <view class="fenleiOne">
+          <view class="select_box">
+
+          <view class="select" catchtap="selectTapsOne">
+            <text class="select_text">{{selectCates[indexsOne]}}</text>
+            <image class='select_img {{showsOne&&"select_img_rotate"}}' src='../../images/sanjiao.png'></image>
+          </view>
+          <view class='option_box' style='height:{{showsOne?(selectCates.length>5?300:selectCates.length*60):0}}rpx;'>
+            <text class='option' style='{{indexs==selectCates.length-1&&"border:0;"}}' wx:for='{{selectCates}}' wx:key='this' data-item='{{item}}' data-index='{{index}}' catchtap='optionTapsOne'>{{item}}</text>
+          </view>
+
+          </view>
+        </view>
+
+
+        <view class="jia" bindtap="goToCreate">+</view>    
+    </view>
+
+</view>
+
+
+  <!-- 中间内容 -->
+<scroll-view scroll-y="true" style="height:{{conHeight}}" enable-flex='true' bindscrolltolower="Lordmore" 
+scroll-top='{{topNum}}'>
+  <view class="main">
+    <view class="detail">
+      <!-- 周报1 -->
+      <view bindtap="goToweekDetail" wx:for='{{weekList}}' wx:key="id" wx:for-item="item" data-cid='{{item.id}}'>
+        <view class="theme">
+          <view>
+            <text class="theme_title">{{item.name}}</text>
+            <text>{{item.date}}</text>
+          </view>
+          <view class="inputBox">
+            {{item.details}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="tips">{{tips}}</view>
+    <!-- 底部加载更多显示 -->
+    <!-- <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view> -->
+  </view>
+</scroll-view>
+
+
+  <!-- 底部五个图标 -->
+  <!-- <view class="tab" style="height:{{botHeight}}">
+    <view class="top">
+      <view class="average" bindtap="goTologs">
+        <image src="../../images/1.png" class="average"></image>
+      </view>
+      <view class="average" bindtap="goToWeek">
+        <image src="../../images/_2.png" class="average"></image>
+      </view>
+      <view id='ico'>
+        <image style='width:50px;height:50px;' src="../../images/RY.png" class="average"></image>
+      </view>
+      <view class="average" bindtap="goTocontest">
+        <image src="../../images/4.png" class="average"></image>
+      </view>
+      <view class="average" bindtap="goToLanded">
+        <image src="../../images/5.png" class="average"></image>
+      </view>
+    </view>
+  </view> -->
+</view>

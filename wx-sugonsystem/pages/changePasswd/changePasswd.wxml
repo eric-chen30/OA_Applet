@@ -1,0 +1,30 @@
+<!--pages/changePasswd/changePasswd.wxml-->
+<view class='container'>
+  <form>
+    <view class='top'>
+      <view class='one_list'>
+        <view class='change'>
+          <view class="input">
+            <input wx:if="{{!isShow1}}" placeholder="请输入新密码" bindinput="newPass" value="{{newPassword}}" type="text" maxlength="16"></input>
+            <input wx:else placeholder="请输入新密码" bindinput="newPass" value="{{newPassword}}" type="password" maxlength="16"></input>
+          </view>
+          <view class="see">
+            <image class="" bindtap="showNewPsd1" src="{{isShow1?'../../images/nosee.png':'../../images/see.png'}}" style="width:40rpx;height:23rpx" mode="aspectFit"></image>
+          </view>
+        </view>
+      </view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class="input">
+            <input wx:if="{{!isShow1}}" placeholder="请确认新密码" bindinput="sure" value="{{makesure}}" type="text" maxlength="16"></input>
+            <input wx:else placeholder="请确认新密码" bindinput="sure" value="{{makesure}}" type="password" maxlength="16"></input>
+          </view>
+          <view class="see">
+            <image class="" bindtap="showNewPsd1" src="{{isShow1?'../../images/nosee.png':'../../images/see.png'}}" style="width:40rpx;height:23rpx" mode="aspectFit"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='btn' bindtap="changePasswd">确定</view>
+  </form>
+</view>

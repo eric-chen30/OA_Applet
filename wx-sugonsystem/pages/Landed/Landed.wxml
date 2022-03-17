@@ -1,0 +1,29 @@
+<!-- Landed.wxml -->
+<view>
+  <!-- 顶部 -->
+  <view class="user">
+    <image bindtap="updateAvter" src="{{avater}}"></image>
+    <view class="word">
+      <view class="t">{{name}}</view>
+      <view class="b">{{post}}</view>
+    </view>
+  </view>
+  <view class="change">
+    <image src="../../images/setting.png" style="width:25px;height:25px;" bindtap="gotoChange"></image>
+  </view>
+  <!-- 中部 -->
+  <view class="social">
+    <view class="px">
+      <navigator url="../../pages/Mylists/Mylists">
+        <view>{{train_num}}</view>
+      </navigator>
+      <view>培训</view>
+    </view>
+    <view class="hj">
+      <navigator url="../../pages/contest/contest">
+        <view>{{honor_num}}</view>
+      </navigator>
+      <view>竞赛获奖</view>
+    </view>
+  </view>
+</view>

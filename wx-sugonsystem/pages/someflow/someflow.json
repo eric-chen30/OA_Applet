@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-button":"../../static/iview/button",
+    "i-card": "../../static/iview/card"
+  }
+}

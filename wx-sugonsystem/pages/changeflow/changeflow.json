@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-cell-group": "../../static/iview/cell-group",
+    "i-cell": "../../static/iview/cell",
+    "i-panel": "../../static/iview/panel",
+    "i-input":"../../static/iview/input",
+    "i-button":"../../static/iview/button",
+
+    "van-calendar": "../../static/vant/calendar",
+    "van-cell": "../../static/vant/cell",
+    "van-popup": "../../static/vant/popup",
+    "van-picker": "../../static/vant/picker",
+    "van-toast":"../../static/vant/toast"
+  }
+}

@@ -1,0 +1,51 @@
+<scroll-view class="main">
+  <form bindsubmit="formSubmit">
+    <view class="addto">
+      <view class="title">
+        <view class="t1">获奖详情</view>
+      </view>
+      <view class="form">
+        <!-- 输入竞赛名称 -->
+        <view class="theme">
+          <view class="theme_title">竞赛名称</view>
+          <view class="inputBox">{{basedata.name}}</view>
+        </view>
+        <!-- 输入所获奖项 -->
+        <view class="theme">
+          <view class="theme_title">所获奖项</view>
+          <view class="inputBox">
+            {{basedata.level}}
+          </view>
+        </view>
+        <!-- 参赛队伍名 -->
+        <view class="theme">
+          <view class="theme_title">参赛队伍</view>
+          <view class="inputBox">
+            {{basedata.team_name}}
+          </view>
+        </view>
+        <!-- 参赛项目名称 -->
+        <view class="theme">
+          <view class="theme_title">参赛项目名称</view>
+          <view class="inputBox">
+            {{basedata.project_name}}
+          </view>
+        </view>
+        <!-- 赛事时间 -->
+        <view class="theme">
+          <view class="theme_title">赛事时间</view>
+          <view class="inputBox">
+            {{basedata.time}}
+          </view>
+        </view>
+
+      </view>
+      <view class="space1">
+      </view>
+      <!-- 提交按钮 -->
+      <!-- <button class="submit" bindtap="setSubmit" hover-class="other-button-class">
+      <text class="submittext">提交修改</text>        
+    </button> -->
+    </view>
+  </form>
+</scroll-view>

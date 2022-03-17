@@ -1,0 +1,51 @@
+<!--pages/processDetail/processDetail.wxml-->
+
+<div class="container">
+    <div class="top">
+        <div class="top-top">流程详情</div>
+    </div>
+
+    <i-panel title="流程名：">
+    <i-input disabled value="{{ title }}" />
+    </i-panel>
+
+    <i-panel title="开始时间：">
+    <i-input disabled value="{{ begin_time }}" />
+    </i-panel>
+    
+
+    <i-panel title="结束时间：">
+    <i-input disabled value="{{ end_time }}" /> 
+    </i-panel>
+
+    <i-panel title="接收者：">
+    <i-input disabled value="{{ receiver }}" />
+    </i-panel>
+
+    <i-panel title="具体内容：">
+    <i-input disabled value="{{ article }}" />
+    </i-panel>
+
+    <i-panel title="反馈意见：" >
+    <i-input disabled='{{isDisabled}}' value="{{ plan }}" bind:change="changePlan"/>
+    </i-panel>
+
+    <i-button bind:click="getProcess" type="success" shape="circle" style="margin-top:10px">确定</i-button>
+
+    <!-- 不同状态的button不同 -->
+    <!-- <view wx:if="{{ state }} == 1">
+    <i-button bind:click="getProcess" type="error" shape="circle" style="margin-top:10px">领取</i-button>
+    </view>
+    <view wx:elif="{{ state }} == 2">
+    <i-button bind:click="getProcess" type="success" shape="circle" style="margin-top:10px">完成</i-button>
+    </view>
+    <view wx:elif="{{ state }} == 3">
+    <i-button bind:click="getProcess" type="primary" shape="circle" style="margin-top:10px">确定</i-button>
+    </view>
+    <view wx:else="{{ state }} == 4">
+    <i-button bind:click="getProcess" type="info" shape="circle" style="margin-top:10px">已逾期</i-button>
+    </view> -->
+    
+</div>
+
+

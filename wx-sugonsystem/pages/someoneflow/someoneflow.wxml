@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="top">
+        <div class="top-top">{{name}}的流程</div>
+    </div>
+
+    <i-card title="流程名" extra="状态" style="width:300px;">
+
+        <view slot="content" class="content" style="margin-top:10px" wx:for='{{detailData}}' wx:key="id" wx:for-item="item">
+            <view class="name"  >{{item.title}}</view>
+            <div class="state">{{item.state}}</div>
+        </view>
+
+    </i-card>
+
+    
+</div>
+
+

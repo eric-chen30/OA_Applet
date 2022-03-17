@@ -1,0 +1,77 @@
+<scroll-view enable-flex='true' style="height: {{pageHeight}}" scroll-y="{{true}}">
+
+  <!-- 上 -->
+  <view class="detailUpper" style="height: {{pageUpp}}">
+
+    <view class="upperOne">
+      {{detailData.name}}
+    </view>
+
+    <view class="upperTwo">
+      培训人：{{detailData.mine.name}}
+    </view>
+
+    <view class="upperThree">
+      培训时间：{{detailData.time}}
+    </view>
+
+    <view class="upperFour">
+      培训地点：{{detailData.location}}
+    </view>
+  </view>
+
+  <!-- 中 -->
+  <view class="detailCon" >
+    <view class="conImg">
+      <image class="show-image" mode="widthFix" src="{{detailData.img}}" style="width:675rpx;" />
+
+      <view wx:if="{{detailData.status == 2}}" class="statusPending">待审</view>
+      <view wx:elif="{{detailData.status == 3}}" class="statusReported">已报备</view>
+      <view wx:elif="{{detailData.status == 4}}" class="statusFail">未通过</view>
+      <view wx:elif="{{detailData.status == 5}}" class="statusCompleted">已完成</view>
+      <view wx:else class="statusUnknown">发出</view>
+
+    </view>
+  </view>
+
+  <!-- 下 -->
+  <view class="detailBot" style="height: {{pageBot}}">
+
+    <view wx:if="{{detailData.status == 3}}" class="botOne">
+      <view style="height: 90%; width: 90%; margin: 0 auto;padding: 10rpx;letter-spacing: 4rpx;font-size:30rpx;font-family: PingFangSC-Regular;">
+        <input type="text" placeholder="如有需求请输入实时通知" placeholder-style="color: #B9B7B7;" bindinput="inputInform" value="{{detailData.inform}}" />
+      </view>
+    </view>
+
+    <view wx:else class="botOne">
+      <view style="height: 90%; width: 90%; margin: 0 auto;padding: 10rpx;letter-spacing: 4rpx;font-size:30rpx;font-family: PingFangSC-Regular;">
+        <text>{{detailData.inform}}</text>
+      </view>
+    </view>
+
+    <view class="botTwo">
+      <view style="height: 90%; width: 90%; margin: 0 auto;padding: 10rpx;letter-spacing: 4rpx;font-size:30rpx;font-family: PingFangSC-Regular;">
+        {{detailData.describe}}
+      </view>
+    </view>
+
+    <!-- <view wx:if="{{detailData.status == 3}}" class="botThree">
+      <button class="submit" hover-class="other-button-class" bindtap="sendTimeInform">
+        <text class="submittext">发布实时通知</text>        
+      </button>
+      <view class="submitHei"></view>
+    </view>
+
+    <view wx:elif="{{detailData.status == 4}}" class="botThree">
+      <button class="submit" hover-class="other-button-class" bindtap="editSubmit">
+        <text class="submittext">调整培训计划</text>        
+      </button>
+      <view class="submitHei"></view>
+    </view> -->
+
+    <view class="botThree">
+    </view>
+
+  </view>
+
+</scroll-view>
